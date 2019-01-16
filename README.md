@@ -292,8 +292,6 @@ plt.plot(z, dy, 'b')
 
 ## Additional Resources
 
-www.coursera.org --> deep learning specialization
-
 https://dashee87.github.io/data%20science/deep%20learning/visualising-activation-functions-in-neural-networks/
 
 
