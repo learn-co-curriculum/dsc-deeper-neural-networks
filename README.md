@@ -22,7 +22,7 @@ A more correct representation of the neural network is then as follows:
 
 ![title](figures/small_log.png)
 
-This means that there is only **one neuron** in the logistic regression neural network is basically a neuron in the output layer. It takes inputs that we *know*, and it directly outputs the observed output, with no layers in between. If this is the case, the neural network network is a **1-layer neural network**.
+This means that there is only **one neuron** in the logistic regression neural network is basically a neuron in the output layer. It takes inputs that we *know*, and it directly outputs the observed output, with no layers in between. If this is the case, the neural network is a **1-layer neural network**.
 
 To make it even more clear, let's look at the network on the left below, which you might remember from the previous lecture. You can think of this network as a logistic regression-kind neural network, but with an extra layer plugged in with 4 nodes. This extra layer is a hidden layer, because we do *not directly observe the output of this layer*. This network is a **2-layer neural network**, or a neural network with 1 hidden layer.
 
@@ -43,7 +43,7 @@ For our 2-layer neural network above, this means that:
 - $\hat y =  a^{[2]}$, the output layer will generate a value $a^{[2]}$, which is equal to $\hat y$.
 
 
-Rember that in each of the nodes in the hidden layer, a linear transformation will take place, as well as a transormation because of an activation function. 
+Remember that in each of the nodes in the hidden layer, a linear transformation will take place, as well as a transformation because of an activation function. 
 
 Let's look at the first node in the hidden layer. The linear transformation that takes place is $ z^{[1]}_1 = w^{[1]}_1 x +b^{[1]}_1$, and the activation  $a^{[1]}_1= f(z^{[1]}_1)$. Notice how we use $f$ here instead of $\sigma$. In fact, we don't have to use the sigmoid as an activation function, there are numerous other options!
 
@@ -82,7 +82,7 @@ $a^{[2]} = f(z^{[1]})$
 
 **Some questions to think about** 
 - What are the dimensions of the matrices associated here?
-- The 4 expressions above don't take into account several training samples. Imagine we use a superscript (i). How do you rewrite these epressions?
+- The 4 expressions above don't take into account several training samples. Imagine we use a superscript (i). How do you rewrite these expressions?
 
 $z^{[1](i)} = w^{[1]T} a^{[0](i)} + b^{[0]}$
 
@@ -178,7 +178,7 @@ plt.plot(z, dy, 'b')
 
 
 
-![png](index_files/index_33_1.png)
+![png](output_33_1.png)
 
 
 ## The hyperbolic tangent (tanh) function
@@ -204,7 +204,7 @@ plt.plot(z, dy, 'b')
 
 
 
-![png](index_files/index_36_1.png)
+![png](output_36_1.png)
 
 
 A disadvantage of both tanh and sigmoid is that, when $z$ gets quite large or small, the derivative of the slopes of these functions become very small, genre 0.0001. This will slow down gradient descent. You can see in the tanh ploy that this already starts happening for values of $z > 2$ or $z < 2$. The next few activation functions will try to overcome this issue.
@@ -232,7 +232,7 @@ plt.plot(z, dy, 'b')
 
 
 
-![png](index_files/index_40_1.png)
+![png](output_40_1.png)
 
 
 ## The Rectified Linear Unit function
@@ -259,7 +259,7 @@ plt.plot(z, y, 'r')
 
 
 
-![png](index_files/index_43_1.png)
+![png](output_43_1.png)
 
 
 ## The leaky Rectified Linear Unit function
@@ -287,7 +287,7 @@ plt.plot(z, dy, 'b')
 
 
 
-![png](index_files/index_46_1.png)
+![png](output_46_1.png)
 
 
 ## Additional Resources
