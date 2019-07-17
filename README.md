@@ -20,19 +20,19 @@ In fact, what exactly does a neuron in a neural network do? The purpose of a neu
 
 A more correct representation of the neural network is then as follows:
 
-![title](images/small_log.png)
+<img src='images/new_small_log.png' width='40%'>
 
 This means that there is only **one neuron** in the logistic regression neural network is basically a neuron in the output layer. It takes inputs that we *know*, and it directly outputs the observed output, with no layers in between. If this is the case, the neural network is a **1-layer neural network**.
 
 To make it even more clear, let's look at the network on the left below, which you might remember from the previous lecture. You can think of this network as a logistic regression-kind neural network, but with an extra layer plugged in with 4 nodes. This extra layer is a hidden layer, because we do *not directly observe the output of this layer*. This network is a **2-layer neural network**, or a neural network with 1 hidden layer.
 
-![title](images/two_network.png)
+<img src='images/new_two_network.png'>
 
 Why is this picture on the left hand side a 2-layer neural network? Don't we see 3 layers of nodes? Well, technically, the input layer is not a layer: no transformations happen here, it's simply a layer of inputs. That's why we included the example on the right hand side above. This is basically (again) another way of representing the logistic regression example, the same type of network as the one you've seen in the image right before. Sometimes the input layer will be denoted with actual nodes, sometimes it won't. Just remember that this layer does not count as an *actual* layer. When we refer to it, we'll say it's layer with index 0.
 
 ## Deeper network notation
 
-![title](images/small_deeper.png)
+<img src='images/new_small_deeper.png' width='700'>
 
 Let's look at this network going forward. With deeper networks, we'll need to introduce new notation. Generally, the output of layer $j$ is denoted as $a^{[j]}$.
 
