@@ -2,7 +2,7 @@
 # Deeper Neural Networks
 
 ## Introduction
-Congratulations, you made it through your first neural networks lab! What we built was already pretty cool, even the test set classification performance wasn't that great. Don't worry, we really just scratched the surface of what neural nets can do! Let's see how we can extend neural networks even further.
+Most neural networks are more than a just single  activation function. Some of the most powerful neural networks use many dozens of layers of activation functions in order to model complex relationships. Let's see how we can extend neural networks even further with deeper neural networks!
 
 ## Objectives
 You will be able to:
