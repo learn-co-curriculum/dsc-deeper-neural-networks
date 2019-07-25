@@ -12,7 +12,7 @@ You will be able to:
 
 Let's look back at our logistic regression neural network example. In the image below, we represented what the forward propagation flow looks like. Now there is one important thing to notice, and that is that this logistic regression neural network is actually *extremely shallow*, as there are **no hidden layers**! How so? 
 
-![title](images/log_reg_deriv.png)
+<img src="./images/new_log_reg.png" width=600>
 
 In fact, what exactly does a neuron in a neural network do? The purpose of a neuron is 2-fold
 - it transforms the inputs doing a linear transformation ( genre $ w x+b$)
