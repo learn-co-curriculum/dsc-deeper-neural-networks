@@ -106,6 +106,7 @@ Until now, we've only discussed the sigmoid activation function. The sigmoid fun
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
+%matplotlib inline
 
 def sigmoid(x, derivative=False):
     f = 1 / (1 + np.exp(-x))
@@ -159,7 +160,7 @@ def arctan(x, derivative=False):
 z = np.arange(-10, 10, 0.2)
 ```
 
-## The sigmoid function
+## The sigmoid function 
 
 Let's have a look at the sigmoid again. Recall that the mathematical expression of the sigmoid is $ a=\dfrac{1}{1+ \exp(-z)}$, and this outputs activation values somewhere between 0 and 1. 
 
@@ -170,15 +171,16 @@ dy = sigmoid(z, derivative=True)
 plt.title('sigmoid')
 plt.axhline(color='gray', linewidth=1,)
 plt.axvline(color='gray', linewidth=1,)
-plt.plot(z, y, 'r')
-plt.plot(z, dy, 'b');
+plt.plot(z, y, 'r', label='original (y)')
+plt.plot(z, dy, 'b', label='derivative (dy)')
+plt.legend();
 ```
 
 
-![png](index_files/index_33_0.png)
+![png](index_files/index_32_0.png)
 
 
-## The hyperbolic tangent (tanh) function
+## The hyperbolic tangent (tanh) function 
 
 The hyperbolic tangent (or tanh) function goes between -1 and +1, and is in fact a shifted version of the sigmoid function, with formula $ a=\dfrac{\exp(z)- \exp(-z)}{\exp(z)+ \exp(-z)}$. For intermediate layers, the tanh function generally performs pretty well because, with values between -1 and +1, the means of the activations coming out are closer to zero! 
 
@@ -186,20 +188,21 @@ The hyperbolic tangent (or tanh) function goes between -1 and +1, and is in fact
 ```python
 y = tanh(z)
 dy = tanh(z, derivative=True)
-plt.title('sigmoid')
+plt.title('tanh')
 plt.axhline(color='gray', linewidth=1,)
 plt.axvline(color='gray', linewidth=1,)
-plt.plot(z, y, 'r')
-plt.plot(z, dy, 'b');
+plt.plot(z, y, 'r', label='original (y)')
+plt.plot(z, dy, 'b', label='derivative (dy)')
+plt.legend();
 ```
 
 
-![png](index_files/index_36_0.png)
+![png](index_files/index_34_0.png)
 
 
-A disadvantage of both tanh and sigmoid activation functions is that when $z$ gets quite large or small, the derivative of the slopes of these functions become very small, generally 0.0001. This will slow down gradient descent. You can see in the tanh plot that this already starts happening for values of $z > 2$ or $z < 2$. The next few activation functions will try to overcome this issue.
+A disadvantage of both tanh and sigmoid activation functions is that when $z$ gets quite large or small, the derivative of the slopes of these functions become very small, generally 0.0001. This will slow down gradient descent. You can see in the tanh plot that this already starts happening for values of $z > 2$ or $z < 2$. The next few activation functions will try to overcome this issue. 
 
-## The inverse tangent (arctan) function
+## The inverse tangent (arctan) function 
 
 The inverse tangent (arctan) function has a lot of the same qualities that tanh has, but the range roughly goes from -1.6 to 1.6, and  the slope is more gentle than the one we saw using the tanh function.
 
@@ -210,15 +213,16 @@ dy = arctan(z, derivative = True)
 plt.title('arctan')
 plt.axhline(color='gray', linewidth=1,)
 plt.axvline(color='gray', linewidth=1,)
-plt.plot(z, y, 'r')
-plt.plot(z, dy, 'b');
+plt.plot(z, y, 'r', label='original (y)')
+plt.plot(z, dy, 'b', label='derivative (dy)')
+plt.legend();
 ```
 
 
-![png](index_files/index_40_0.png)
+![png](index_files/index_36_0.png)
 
 
-## The Rectified Linear Unit function
+## The Rectified Linear Unit function 
 
 This is probably the most popular activation function, along with the tanh! The fact that the activation is exactly 0 when $z <0$  is slightly cumbersome when taking derivatives though. 
 
@@ -231,15 +235,16 @@ y = relu(z)
 dy = relu(z, derivative=True)
 plt.axhline(color='gray', linewidth=1,)
 plt.axvline(color='gray', linewidth=1,)
-plt.plot(z, dy, 'b')
-plt.plot(z, y, 'r');
+plt.plot(z, dy, 'b', label='original (y)')
+plt.plot(z, y, 'r', label='derivative (dy)')
+plt.legend();
 ```
 
 
-![png](index_files/index_43_0.png)
+![png](index_files/index_38_0.png)
 
 
-## The leaky Rectified Linear Unit function
+## The leaky Rectified Linear Unit function 
 
 The leaky ReLU solves the derivative issue by allowing for the activation to be slightly negative when $z <0$. 
 
@@ -254,20 +259,20 @@ plt.axhline(color='gray', linewidth=1,)
 plt.axvline(color='gray', linewidth=1,)
 plt.title('leaky ReLU')
 plt.xlim(-10,10)
-plt.plot(z, y, 'r')
-plt.plot(z, dy, 'b');
+plt.plot(z, y, 'r', label='original (y)')
+plt.plot(z, dy, 'b', label='derivative (dy)')
+plt.legend();
 ```
 
 
-![png](index_files/index_46_0.png)
+![png](index_files/index_40_0.png)
 
 
-## Additional Resources
+## Additional Resources 
 
-https://dashee87.github.io/data%20science/deep%20learning/visualising-activation-functions-in-neural-networks/
+- [Visualising activation functions in neural networks](https://dashee87.github.io/data%20science/deep%20learning/visualising-activation-functions-in-neural-networks/)
 
 
 ## Summary 
 
 In this lecture, you obtained a better intuition on how "deeper" neural networks work, and you learned about some very important notation that will be used when building deeper networks. Additionally, you learned about activation functions other than the sigmoid function, and what their derivatives look like.
-
