@@ -1,4 +1,3 @@
-
 # Deeper Neural Networks
 
 ## Introduction
@@ -16,7 +15,7 @@ You will be able to:
 
 Let's look back at our logistic regression neural network example. In the image below, we represented what the forward propagation flow looks like. Now there is one important thing to notice, and that is that this logistic regression neural network is actually *extremely shallow*, as there are **no hidden layers**! How so? 
 
-<img src="./images/new_log_reg.png" width=600>
+<img src="https://curriculum-content.s3.amazonaws.com/data-science/images/new_log_reg.png" width=600>
 
 In fact, what exactly does a neuron in a neural network do? The purpose of a neuron is 2-fold: 
 - transforms the inputs doing a linear transformation (generally $ w x+b$)
@@ -24,19 +23,19 @@ In fact, what exactly does a neuron in a neural network do? The purpose of a neu
 
 A more correct representation of the neural network is then as follows:
 
-<img src='images/new_small_log.png' width='40%'>
+<img src='https://curriculum-content.s3.amazonaws.com/data-science/images/new_small_log.png' width='40%'>
 
 This means that there is only **one neuron** in the logistic regression neural network -- basically a neuron in the output layer. It takes inputs that we *know*, and it directly outputs the observed output, with no layers in between. If this is the case, the neural network is a **1-layer neural network**.
 
 To make it even more clear, let's look at the network on the left below, which you might remember from a previous lesson. You can think of this network as a logistic regression-kind neural network, but with an extra layer plugged in with four nodes. This extra layer is a hidden layer, because we do *not directly observe the output of this layer*. This network is a **2-layer neural network**, or a neural network with 1 hidden layer.
 
-<img src='images/new_two_network.png'>
+<img src='https://curriculum-content.s3.amazonaws.com/data-science/images/new_two_network.png'>
 
 Why is this picture on the left hand side a 2-layer neural network? Don't we see 3 layers of nodes? Well, technically, the input layer is not a layer: no transformations happen here, it's simply a layer of inputs. That's why we included the example on the right hand side above. This is basically (again) another way of representing the logistic regression example, the same type of network as the one you've seen in the image right before. Sometimes the input layer will be denoted with actual nodes, sometimes it won't. Just remember that this layer does not count as an *actual* layer. When we refer to it, we'll say it's layer with index 0.
 
 ## Deeper network notation
 
-<img src='images/new_small_deeper.png' width='700'>
+<img src='https://curriculum-content.s3.amazonaws.com/data-science/images/new_small_deeper.png' width='700'>
 
 Let's look at this network going forward. With deeper networks, we'll need to introduce new notation. Generally, the output of layer $j$ is denoted as $a^{[j]}$.
 
@@ -177,7 +176,9 @@ plt.legend();
 ```
 
 
+    
 ![png](index_files/index_32_0.png)
+    
 
 
 ## The hyperbolic tangent (tanh) function 
@@ -197,7 +198,9 @@ plt.legend();
 ```
 
 
+    
 ![png](index_files/index_34_0.png)
+    
 
 
 A disadvantage of both tanh and sigmoid activation functions is that when $z$ gets quite large or small, the derivative of the slopes of these functions become very small, generally 0.0001. This will slow down gradient descent. You can see in the tanh plot that this already starts happening for values of $z > 2$ or $z < 2$. The next few activation functions will try to overcome this issue. 
@@ -219,7 +222,9 @@ plt.legend();
 ```
 
 
+    
 ![png](index_files/index_36_0.png)
+    
 
 
 ## The Rectified Linear Unit function 
@@ -241,7 +246,9 @@ plt.legend();
 ```
 
 
+    
 ![png](index_files/index_38_0.png)
+    
 
 
 ## The leaky Rectified Linear Unit function 
@@ -265,7 +272,9 @@ plt.legend();
 ```
 
 
+    
 ![png](index_files/index_40_0.png)
+    
 
 
 ## Additional Resources 
