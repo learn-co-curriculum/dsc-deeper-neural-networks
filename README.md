@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Some of the most powerful neural networks use many dozens of layers of activation functions in order to model complex relationships. Let's see how we can extend neural networks even further with deeper neural networks!
+Some of the most powerful neural networks use many dozens of layers of activation functions in order to model complex relationships. Let's see how we can extend neural networks even further with deeper neural networks.
 
 ## Objectives
 You will be able to:
@@ -12,6 +12,8 @@ You will be able to:
 - List the different activation functions  
 - Compare and contrast the different activation functions 
 
+
+**N.B.** *The LaTeX, i.e. math notation, renders correctly in the notebook, but not all of renders properly to the markdown file. Unfortunately, while this is a known solution, there isn't a solution in the Python notebook community.*
 
 Let's look back at our logistic regression neural network example. In the image below, we represented what the forward propagation flow looks like. Now there is one important thing to notice, and that is that this logistic regression neural network is actually *extremely shallow*, as there are **no hidden layers**! How so? 
 
@@ -240,8 +242,8 @@ y = relu(z)
 dy = relu(z, derivative=True)
 plt.axhline(color='gray', linewidth=1,)
 plt.axvline(color='gray', linewidth=1,)
-plt.plot(z, dy, 'b', label='original (y)')
-plt.plot(z, y, 'r', label='derivative (dy)')
+plt.plot(z, y, 'r', label='original (y)') 
+plt.plot(z, dy, 'b', label='derivative (dy)')
 plt.legend();
 ```
 
